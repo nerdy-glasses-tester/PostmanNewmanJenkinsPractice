@@ -153,8 +153,8 @@
 					"script": {
 						"id": "6ffcf3b3-e862-4800-80f0-2f95a44b2003",
 						"exec": [
-							"pm.test(\"Status code is 204\", function () {",
-							"    pm.response.to.have.status(204);",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -219,10 +219,11 @@
 	],
 	"variable": [
 		{
-			"id": "c093f9e1-b8e8-440f-8aa1-4324d361de1e",
+			"id": "4aa3ad62-737a-4cbb-9988-049ad8257f7a",
 			"key": "url",
 			"value": "https://jsonplaceholder.typicode.com",
-			"type": "string"
+			"type": "string",
+			"disabled": true
 		}
 	]
 }
