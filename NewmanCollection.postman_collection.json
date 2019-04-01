@@ -7,6 +7,24 @@
 	"item": [
 		{
 			"name": "Post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7f817922-9a30-4fb2-a826-c1d5175314a6",
+						"exec": [
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.title).to.eql(\"Angee first post\");",
+							"});",
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -35,6 +53,20 @@
 		},
 		{
 			"name": "Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6b264fdc-4ac4-4df1-871b-1ba9af08b386",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -66,6 +98,20 @@
 		},
 		{
 			"name": "Put",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cdfc4c5e-e52d-44d5-807d-47070aa8022e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -101,6 +147,20 @@
 		},
 		{
 			"name": "Delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6ffcf3b3-e862-4800-80f0-2f95a44b2003",
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -159,7 +219,7 @@
 	],
 	"variable": [
 		{
-			"id": "e9a4bf8f-7186-429f-94d1-a44d8131e647",
+			"id": "c093f9e1-b8e8-440f-8aa1-4324d361de1e",
 			"key": "url",
 			"value": "https://jsonplaceholder.typicode.com",
 			"type": "string"
